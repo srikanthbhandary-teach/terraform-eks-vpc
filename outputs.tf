@@ -7,7 +7,7 @@ output "public_subnet_ids"{
 }
 
 output "vpc_id"{
-    value = aws_vpc.cluster_vpc.cidr_block
+    value = aws_vpc.cluster_vpc.id
 }
 
 output "vpc_default_security_group_id"{
