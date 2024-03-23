@@ -47,3 +47,8 @@ variable "environment" {
   type    = string
   default = "test"
 }
+
+var "region"{
+  type    = string
+  default = "eu-north=1"
+}
