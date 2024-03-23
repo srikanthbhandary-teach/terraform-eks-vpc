@@ -9,7 +9,8 @@ resource "aws_subnet" "public_subnet" {
     local.tags,
     {
       "Name" : "${var.cluster_name}-subnet-public-${each.value}",
-      "kubernetes.io/role/elb" = "1"
+      "kubernetes.io/role/elb" = "1",
+      "kubernetes.io/cluster/${var.cluster_name}" = "owned"
     }
   )
 }
